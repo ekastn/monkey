@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  run:
+    deps: [build]
+    cmds:
+      - ./bin/monkey
+  build:
+    cmds:
+      - go build -o bin/monkey cmd/main.go
+    sources:
+      - ./**/*.go
+  test:
+    cmds:
+      - go test ./...
