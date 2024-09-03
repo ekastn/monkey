@@ -23,7 +23,7 @@ func TestString(t *testing.T) {
         },
     }
 
-    if program.Sring() != "let foo = bar;" {
-        t.Errorf("program.String() wrong, got=%q", program.Sring())
+    if program.String() != "let foo = bar;" {
+        t.Errorf("program.String() wrong, got=%q", program.String())
     }
 }
