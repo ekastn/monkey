@@ -7,11 +7,13 @@ import (
 
 	"github.com/eka-septian/monkey/internal/evaluator"
 	"github.com/eka-septian/monkey/internal/lexer"
+	"github.com/eka-septian/monkey/internal/object"
 	"github.com/eka-septian/monkey/internal/parser"
 )
 
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
+	env := object.NewEnvironment()
 
 	for {
 		fmt.Printf("monkey > ")
@@ -30,7 +32,7 @@ func Start(in io.Reader, out io.Writer) {
 			continue
 		}
 
-		evaluated := evaluator.Eval(program)
+		evaluated := evaluator.Eval(program, env)
 		if evaluated != nil {
 			io.WriteString(out, evaluated.Inspect())
 			io.WriteString(out, "\n")
