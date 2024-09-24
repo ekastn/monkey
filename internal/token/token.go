@@ -12,8 +12,9 @@ const (
 	EOF     = "EOF"
 
 	// Identifiers + literals
-	IDENT = "IDENT" // add, foobar, x, y, ...
-	INT   = "INT"   // 123456
+	IDENT  = "IDENT" // add, foobar, x, y, ...
+	INT    = "INT"   // 123456
+	STRING = "STRING"
 
 	// Operators
 	ASSIGN   = "="
@@ -23,11 +24,11 @@ const (
 	ASTERISK = "*"
 	SLASH    = "/"
 
-	LT       = "<"
-	GT       = ">"
+	LT = "<"
+	GT = ">"
 
-	EQ       = "=="
-	NOT_EQ       = "!="
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	// Delimiters
 	COMMA     = ","
