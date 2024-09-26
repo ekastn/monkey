@@ -1,28 +1,30 @@
 package repl
 
 import (
-	"bufio"
-	"fmt"
 	"io"
+	"strings"
 
 	"github.com/ekastn/monkey/internal/evaluator"
 	"github.com/ekastn/monkey/internal/lexer"
 	"github.com/ekastn/monkey/internal/object"
 	"github.com/ekastn/monkey/internal/parser"
+
+	"github.com/reeflective/readline"
 )
 
 func Start(in io.Reader, out io.Writer) {
-	scanner := bufio.NewScanner(in)
 	env := object.NewEnvironment()
 
+	rl := readline.NewShell()
+	rl.Prompt.Primary(func() string { return ">> " })
+	rl.AcceptMultiline = multiline
+
 	for {
-		fmt.Printf("monkey > ")
-		scanned := scanner.Scan()
-		if !scanned {
-			return
+		line, err := rl.Readline()
+		if err != nil {
+			break
 		}
 
-		line := scanner.Text()
 		l := lexer.New(line)
 		p := parser.New(l)
 
@@ -46,4 +48,12 @@ func printParserError(out io.Writer, errors []string) {
 	for _, msg := range errors {
 		io.WriteString(out, "  "+msg+"\n")
 	}
+}
+
+func multiline(line []rune) (accept bool) {
+	if !strings.HasSuffix(string(line), ";") {
+		return false
+	}
+
+	return true
 }
