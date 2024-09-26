@@ -3,7 +3,7 @@ package lexer
 import (
 	"testing"
 
-	"github.com/eka-septian/monkey/internal/token"
+	"github.com/ekastn/monkey/internal/token"
 )
 
 func TestNextToken(t *testing.T) {

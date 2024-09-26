@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/eka-septian/monkey/internal/repl"
+	"github.com/ekastn/monkey/internal/repl"
 )
 
 func main() {

@@ -3,8 +3,8 @@ package evaluator
 import (
 	"fmt"
 
-	"github.com/eka-septian/monkey/internal/ast"
-	"github.com/eka-septian/monkey/internal/object"
+	"github.com/ekastn/monkey/internal/ast"
+	"github.com/ekastn/monkey/internal/object"
 )
 
 var (

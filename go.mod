@@ -1,3 +1,3 @@
-module github.com/eka-septian/monkey
+module github.com/ekastn/monkey
 
 go 1.22.5

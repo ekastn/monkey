@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/eka-septian/monkey/internal/evaluator"
-	"github.com/eka-septian/monkey/internal/lexer"
-	"github.com/eka-septian/monkey/internal/object"
-	"github.com/eka-septian/monkey/internal/parser"
+	"github.com/ekastn/monkey/internal/evaluator"
+	"github.com/ekastn/monkey/internal/lexer"
+	"github.com/ekastn/monkey/internal/object"
+	"github.com/ekastn/monkey/internal/parser"
 )
 
 func Start(in io.Reader, out io.Writer) {

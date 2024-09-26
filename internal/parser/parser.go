@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/eka-septian/monkey/internal/ast"
-	"github.com/eka-septian/monkey/internal/lexer"
-	"github.com/eka-septian/monkey/internal/token"
+	"github.com/ekastn/monkey/internal/ast"
+	"github.com/ekastn/monkey/internal/lexer"
+	"github.com/ekastn/monkey/internal/token"
 )
 
 type Parser struct {

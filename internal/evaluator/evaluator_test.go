@@ -3,9 +3,9 @@ package evaluator
 import (
 	"testing"
 
-	"github.com/eka-septian/monkey/internal/lexer"
-	"github.com/eka-septian/monkey/internal/object"
-	"github.com/eka-septian/monkey/internal/parser"
+	"github.com/ekastn/monkey/internal/lexer"
+	"github.com/ekastn/monkey/internal/object"
+	"github.com/ekastn/monkey/internal/parser"
 )
 
 func TestEvalIntegerExpression(t *testing.T) {

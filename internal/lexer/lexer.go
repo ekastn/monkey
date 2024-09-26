@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"github.com/eka-septian/monkey/internal/token"
+	"github.com/ekastn/monkey/internal/token"
 )
 
 type Lexer struct {

@@ -6,7 +6,7 @@ import (
 	"hash/fnv"
 	"strings"
 
-	"github.com/eka-septian/monkey/internal/ast"
+	"github.com/ekastn/monkey/internal/ast"
 )
 
 type ObjectType string

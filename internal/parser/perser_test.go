@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/eka-septian/monkey/internal/ast"
-	"github.com/eka-septian/monkey/internal/lexer"
+	"github.com/ekastn/monkey/internal/ast"
+	"github.com/ekastn/monkey/internal/lexer"
 )
 
 func TestLetStatements(t *testing.T) {
